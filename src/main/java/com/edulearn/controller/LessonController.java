@@ -16,11 +16,6 @@ public class LessonController {
     @Autowired
     private LessonService lessonService;
 
-//    @PostMapping
-//    public ResponseEntity<LessonDTO> createLesson(@Valid @RequestBody LessonDTO lesson) {
-//        LessonDTO newLesson = lessonService.createLesson(lesson);
-//        return ResponseEntity.ok(newLesson);
-//    }
 
     @PostMapping("/courses/{courseId}/lessons")
     public ResponseEntity<LessonDTO> createLesson(
@@ -39,13 +34,6 @@ public class LessonController {
         return ResponseEntity.ok(lessons);
     }
 
-    // iska kaam nhi hai
-//    @GetMapping("/{id}")
-//    public ResponseEntity<LessonDTO> getLesson(@PathVariable Long id) {
-//        return lessonService.findById(id)
-//                .map(ResponseEntity::ok)
-//                .orElse(ResponseEntity.notFound().build());
-//    }
 
     @PutMapping("/{id}")
     public ResponseEntity<LessonDTO> updateLesson(
